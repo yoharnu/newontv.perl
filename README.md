@@ -2,4 +2,4 @@
 
 Command line: perl new.pl sample-shows
 
-"sample-shows" is a file with a list of the shows you want to keep track of
+"sample-shows" is a file with a list of the shows you want to keep track of. Rename it to whatever you'd like
