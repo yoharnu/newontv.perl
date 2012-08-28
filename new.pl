@@ -10,7 +10,7 @@ $language = "en";
 
 $match = 0;
 @shows = ();
-open(SHOWS, "$ARGV[2]");
+open(SHOWS, "$ARGV[0]");
 while(chomp($line = <SHOWS>)){
 	push(@shows,$line);
 }
@@ -23,10 +23,10 @@ while(chomp($line = <AVAILABLE>)){
 }
 close(AVAILABLE);
 
-system("wget -q http://www.tvguide.com/new-tonight/$ARGV[0]");
-open(INPUT, "$ARGV[0]");
-open(OUT, ">$ARGV[1]");
-system("rm -rf $ARGV[2]-search.txt");
+system("wget -q http://www.tvguide.com/new-tonight/80001");
+open(INPUT, "80001");
+open(OUT, ">new.txt");
+system("rm -rf $ARGV[0]-search.txt");
 while(chomp($line = <INPUT>)){
 	if($line =~ /<h6 id="(.*)">.*<\/h6>/){
 		print OUT "$1\n";
@@ -102,7 +102,7 @@ while(chomp($line = <INPUT>)){
 							printf OUT "\ts%02d",$s;
 							printf OUT "e%02d",$e;
 						}
-						open(SEARCH, ">>$ARGV[2]-search.txt");
+						open(SEARCH, ">>$ARGV[0]-search.txt");
 						if(not($s == 0 and $e == 0)){
 							printf SEARCH "$search s%02de%02d\n",$s,$e;
 						}
@@ -117,9 +117,9 @@ while(chomp($line = <INPUT>)){
 close(INPUT);
 close(OUT);
 if($match == 0){
-	open(OUT, ">$ARGV[1]");
+	open(OUT, ">new.txt");
 	print OUT "There is nothing new tonight.\n";
 	close(OUT);
 }
-system("rm -rf $ARGV[0]");
+system("rm -rf 80001");
 exit;
