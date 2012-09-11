@@ -1,5 +1,4 @@
-**The perl version is the only working version right now.
+Usage:
+	perl newtv.pl sample-shows
 
-Command line: perl new.pl sample-shows
-
-"sample-shows" is a file with a list of the shows you want to keep track of. Rename it to whatever you'd like
+*sample-shows is a list of shows to stay updated on
