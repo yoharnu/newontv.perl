@@ -1,1 +1,1 @@
-{"google":"","note":"Don't delete this file! It's used internally to help with page regeneration.","tagline":"","body":"Usage:\r\n\tperl newtv.pl sample-shows\r\n\r\n*sample-shows is a list of shows to stay updated on\r\n","name":"NewOnTV"}
+{"tagline":"","note":"Don't delete this file! It's used internally to help with page regeneration.","name":"NewOnTV","body":"Usage:\r\n\tperl newtv.pl sample-shows\r\n\r\n*sample-shows is a list of shows to stay updated on\r\n","google":""}
